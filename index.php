@@ -15,6 +15,7 @@
 <html>
 <head>
 	<title>Manage by Admin</title>
+	<meta charset="utf-8">
 <script>
 	function xacnhan(){
 		if(!window.confirm("Do you want to delete this user ?")){
@@ -33,6 +34,7 @@
 </head>
 <body>
 <br>
+<p>dc rồi</p>
 	<table width='700' align='center' cellspacing="0">
 	<tr>
 		<td>STT</td>
