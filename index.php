@@ -34,7 +34,6 @@
 </head>
 <body>
 <br>
-<p>dc rồi</p>
 	<table width='700' align='center' cellspacing="0">
 	<tr>
 		<td>STT</td>
