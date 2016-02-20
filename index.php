@@ -8,7 +8,7 @@
 	}
 	echo "<center>";
 	echo "Hello " .$_SESSION['ses_username'];
-	echo "<br><a href='add_user.php'>Add Member</a> - <a href='logout.php'>Logout</a><br>";
+	echo "<br><br><a href='add_user.php'>Add Member</a> - <a href='logout.php'>Logout</a>";
 	echo "</center>";	
 ?>
 <!DOCTYPE html>
@@ -32,6 +32,7 @@
 </style>
 </head>
 <body>
+<br>
 	<table width='700' align='center' cellspacing="0">
 	<tr>
 		<td>STT</td>
