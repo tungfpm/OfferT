@@ -2,8 +2,11 @@
 	require("user.php");
 	session_start();
 
-	if ($_SESSION['ses_level'] != 2) {
+	if ($_SESSION['ses_level'] == 1) {
 		header("location:listoff.php");
+		exit();
+	} else if ($_SESSION['ses_level'] != 2){
+		header("location:login.php");
 		exit();
 	}
 	echo "<center>";
