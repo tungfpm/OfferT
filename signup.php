@@ -9,12 +9,20 @@
 		float: left;
 		width: 100px;
 	}
+	body{
+		background-image: url(images/dollars_yellow.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	form{
+		margin-top: 260px;
+	}
 </style>
 <body>
 <table align="center"><tr><td>
 	<form action="signup.php" name="TungfpmForm" method="post">
 		<p><label>Username : </label><input type="text" name="fuser" /></p>
-		<p><label>Password : </label><input type="text" name="fpass" /></p>
+		<p><label>Password : </label><input type="password" name="fpass" /></p>
 		<p><label>Email : </label><input type="text" name="femail" /></p>
 		<center><p><input type="submit" name="login" value="Login" />
 		<input type="submit" name="submit" value="Register" /></p>
@@ -42,7 +50,12 @@
 		if($_POST['femail'] == NULL) {
 			echo "Email trống<br />";
 		}else{
-			$e=$_POST['femail'];
+			$email = $_POST['femail'];
+			if(filter_var($email,FILTER_VALIDATE_EMAIL)){
+				$e = $email;
+			} else {
+				echo "Email không hợp lệ";
+			}
 		}
 
 		$l= 1;
