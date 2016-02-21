@@ -3,20 +3,25 @@
 <head>
 	<title>Login</title>
 </head>
+<style type="text/css">
+	body{
+		background-image: url(images/dollars_yellow.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	form{
+		margin-top: 260px;
+	}
+</style>
 <body>
-
 <center>
-	<form action="login.php" name="TungfpmForm" method="post">
-		<br><br />
+	<form action="login.php" name="TungfpmForm" method="post">		
 		<p>Username: <input type="text" name="txtuser" size="25" /></p>
 		<p>Password: <input type="password" name="txtpass" size="25" /></p>
 		<p><input type="submit" name="submit" value="Login" />
 		<input type="submit" name="sign" value="Sign Up" /></p>
 	</form>
-</center>
-</body>
-</html>
-<?php
+	<?php
 	session_start();
 	require("user.php");
 	$u = "";
@@ -52,3 +57,6 @@
 		header("location:signup.php");
 	}
 ?>
+</center>
+</body>
+</html>

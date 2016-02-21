@@ -10,8 +10,8 @@
 		exit();
 	}
 	echo "<center>";
-	echo "Hello " .$_SESSION['ses_username'];
-	echo "<br><br><a href='add_user.php'>Add Member</a> - <a href='logout.php'>Logout</a>";
+	echo "<h2><font color='red'>Hello " .$_SESSION['ses_username']."</font></h2>";
+	echo "<a href='add_user.php'>Add Member</a> - <a href='logout.php'>Logout</a>";
 	echo "</center>";	
 ?>
 <!DOCTYPE html>
@@ -32,12 +32,19 @@
 	}
 	table,tr,td{
 		border: 1px solid;
+		background-color: #fff;
+	}
+	body{
+		background: url(images/blur_colors.jpg);
+		background-position: scroll; 
+		background-repeat: no-repeat;
+		background-origin: cover;
 	}
 </style>
 </head>
 <body>
 <br>
-	<table width='700' align='center' cellspacing="0">
+	<table width='900' align='center' cellspacing="0">
 	<tr>
 		<td>STT</td>
 		<td>Username</td>
@@ -73,5 +80,6 @@
 	?>
 	
 </table>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>

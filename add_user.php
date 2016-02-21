@@ -4,9 +4,20 @@
 	<title>Add user</title>
 	<meta charset="utf-8">
 </head>
+<style type="text/css">
+	body{
+		background: url(images/blur_colors.jpg);
+		background-position: scroll; 
+		background-repeat: no-repeat;
+		background-origin: cover;
+	}
+	form{
+		margin-top: 100px;
+	}
+</style>
 <body>
 <form action="add_user.php" name="TungfpmForm" method="post">
-<table align="center">
+<table align="center" cellpadding="10px">
 	<tr>
 		<td>Level : </td>
 		<td>

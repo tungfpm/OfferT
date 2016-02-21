@@ -11,10 +11,19 @@
 	<title>Edit User</title>
 </head>
 <style>
- label {
-float : left;
-width :100px;
-}
+    label {
+        float : left;
+        width :100px;
+    }
+    body{
+        background: url(images/blur_colors.jpg);
+        background-position: scroll; 
+        background-repeat: no-repeat;
+        background-origin: cover;
+    }
+    form{
+        margin-top: 100px;
+    }
 </style>
 <body>
 <table align="center">
