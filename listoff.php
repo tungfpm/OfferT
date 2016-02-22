@@ -72,9 +72,11 @@
     </header>
 
     
-
-
-    
+<center><input type="submit" name="logout" value="LogOut" /></center>
+<?php if (isset($_POST['logout'])) {
+    header("location:logout.php");
+}
+ ?>
 
     <section id="service">
         <div class="container">
