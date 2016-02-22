@@ -106,7 +106,7 @@
                                                          ?>
                                                          <div>
                                                         <div>
-                                                        <input type="button" value="Xem" style="width:75px;font-size:10px;margin:0px;padding:0px;" onclick="if (this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display != '') { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = '';this.innerText = ''; this.value = 'Ẩn'; } else { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = 'none'; this.innerText = ''; this.value = 'Xem'; }">
+                                                        <input type="button" value="QR code" style="width:75px;font-size:10px;margin:0px;padding:0px;" onclick="if (this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display != '') { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = '';this.innerText = ''; this.value = 'Ẩn'; } else { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = 'none'; this.innerText = ''; this.value = 'QR code'; }">
                                                         </div>
                                                         <div>
                                                         <div style="display: none;">
@@ -142,8 +142,22 @@
 										 					echo "<center>";
 										 					echo $value["name"]."<br>";
 										 					echo "<a href=".$trackingUrl."> download</a> <br>";
-										                                        echo  "<img src='http://api.qrserver.com/v1/create-qr-code/?data=".$trackingUrl."&size=150x150'/> <br>";
-										 					echo "</center>";
+										                                       
+										 					 ?>
+                                                         <div>
+                                                        <div>
+                                                        <input type="button" value="QR code" style="width:75px;font-size:10px;margin:0px;padding:0px;" onclick="if (this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display != '') { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = '';this.innerText = ''; this.value = 'Ẩn'; } else { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = 'none'; this.innerText = ''; this.value = 'QR code'; }">
+                                                        </div>
+                                                        <div>
+                                                        <div style="display: none;">
+                                                            <?php
+                                                                 echo  "<img src='http://api.qrserver.com/v1/create-qr-code/?data=".$trackingUrl."&size=150x150'/> <br>";
+                                                            ?>
+                                                        </div>
+                                                        </div>
+                                                        </div>   
+                                                         <?php
+                                                            echo "</center>";
 										 					}
 										 				}
 										 			}
