@@ -102,7 +102,7 @@
                                                                                                                     
                                                                                                           
                                                               echo "<a href=".$trackingUrl."> download</a> <br>";                                                                            
-                                                         echo  "<img src='http://api.qrserver.com/v1/create-qr-code/?data=".$trackingUrl."&size=150x150'/> <br>";
+                                                         
                                                          ?>
                                                          <div>
                                                         <div>
@@ -110,7 +110,9 @@
                                                         </div>
                                                         <div>
                                                         <div style="display: none;">
-                                                        {Phần nội dung bị ẩn}
+                                                            <?php
+                                                                echo  "<img src='http://api.qrserver.com/v1/create-qr-code/?data=".$trackingUrl."&size=150x150'/> <br>";
+                                                            ?>
                                                         </div>
                                                         </div>
                                                         </div>   
