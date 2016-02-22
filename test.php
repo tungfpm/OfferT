@@ -4,20 +4,15 @@
 	<title></title>
 </head>
 <body>
-<form action="test.php" method="post">
-	<input type="submit" name="submit" />
-</form>
+<div>
+<div>
+<input type="button" value="Xem" style="width:75px;font-size:10px;margin:0px;padding:0px;" onclick="if (this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display != '') { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = '';this.innerText = ''; this.value = 'Ẩn'; } else { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = 'none'; this.innerText = ''; this.value = 'Xem'; }">
+</div>
+<div>
+<div style="display: none;">
+{Phần nội dung bị ẩn}
+</div>
+</div>
+</div>
 </body>
 </html>
-<?php
-	require_once("user.php");
-	$u = new user;
-	if (isset($_POST['submit'])){
-		$ip1 = $u->getRemoteIPAddress();
-		$ip2 = $u->getRealIPAddress();
-		// echo $ip1;
-		// echo $ip2;
-		echo $_SERVER['REMOTE_ADDR'];  
-	}
-	
-?>

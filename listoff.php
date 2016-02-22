@@ -1,4 +1,11 @@
-﻿<!DOCTYPE html>
+﻿<?php
+    session_start();
+    if ($_SESSION['ses_level'] != 1){
+        header("location:login.php");
+        exit();
+    }
+?>
+<!DOCTYPE html>
 <html class="no-js">
     <head>
         <meta charset="utf-8">
