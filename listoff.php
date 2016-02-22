@@ -72,11 +72,7 @@
     </header>
 
     
-<center><input type="submit" name="logout" value="LogOut" /></center>
-<?php if (isset($_POST['logout'])) {
-    header("location:logout.php");
-}
- ?>
+<center><input type="button" value="LogOut" class="button" onclick="location.href='logout.php'"></center>
 
     <section id="service">
         <div class="container">
