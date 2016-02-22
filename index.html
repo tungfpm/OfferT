@@ -55,7 +55,7 @@
                 </div>
                 <div class="col-md-6 col-sm-6">
                     <div class="block wow fadeInRight" data-wow-delay="1s">
-                        <h2>Download app and Game</br>all app for Android and iOS</h2>     
+                        <h2>Download app and Game</br>all app for Androi and IOS</h2>     
                    </div>
 
                     </div>
@@ -72,89 +72,8 @@
     <section id="service">
         <div class="container">
             <div class="row">
-                    <div class="col-md-12">
-			 		<ul class="nav nav-tabs">
-			 			<li> <a class="active" href ="#Android" data-toggle="tab">Android</a></li>
-			 			<li> <a href ="#IOS" data-toggle="tab">IOS </a></li>
-						<li> <a href ="#PC" data-toggle="tab"> PC </a></li>
-			 		</ul>
-			 		<div  class="tab-content">
-			 			<div class="tab-pane active" id="Android">
-			 	 					   <?php
-										$ip= $_SERVER['REMOTE_ADDR'];
-										$get_info_ip = "http://freegeoip.net/json/".$ip;
-										$info_ip = file_get_contents($get_info_ip);
-										$info_ip = json_decode($info_ip, true);
-										$countries = $info_ip["country_code"];
-										$off = file_get_contents("http://api.artofclick.com/web/Api/v2.0/offer.json?api_key=59fbe5402c7a3ec194de906a31c720ae3e9ede20d15a1157646138bef3011372");
-										$off1  = json_decode($off,true);
-										foreach ($off1["offers"] as $key => $value) {
-										 	$os = $value["os"];
-										 	foreach ($value["countries"] as $key => $value2) {
-										 		if ($value2==$countries) {
-										 			foreach ($os as $key => $value1) {
-										 				if($value1 == "Android"){
-										 				    $id_offer = $value["id"];
-
-										 				      	$trackingUrl = $value["trackingUrl"];
-										 					echo "<center>";
-										 					echo $value["name"]."<br>";
-                                                                                                                    
-                                                                                                          
-                                                              echo "<a href=".$trackingUrl."> download</a> <br>";                                                                            
-                                                         echo  "<img src='http://api.qrserver.com/v1/create-qr-code/?data=".$trackingUrl."&size=150x150'/> <br>";
-                                                         ?>
-                                                         <div>
-                                                        <div>
-                                                        <input type="button" value="Xem" style="width:75px;font-size:10px;margin:0px;padding:0px;" onclick="if (this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display != '') { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = '';this.innerText = ''; this.value = 'Ẩn'; } else { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = 'none'; this.innerText = ''; this.value = 'Xem'; }">
-                                                        </div>
-                                                        <div>
-                                                        <div style="display: none;">
-                                                        {Phần nội dung bị ẩn}
-                                                        </div>
-                                                        </div>
-                                                        </div>   
-                                                         <?php
-										 					echo "</center>";
-                                                                                                                       
-										 					}
-										 				}
-										 			}
-										 		}
-										 	}
-
-										?>
-			 			</div>
-			 			<div class="tab-pane " id="IOS">
-                                                       <?php
-
-										foreach ($off1["offers"] as $key => $value) {
-										 	$os = $value["os"];
-										 	foreach ($value["countries"] as $key => $value2) {
-										 		if ($value2==$countries) {
-										 			foreach ($os as $key => $value1) {
-										 				if($value1 == "iOS"){
-										 				    $id_offer = $value["id"];
-
-										 					$trackingUrl = $value["trackingUrl"];
-										 					echo "<center>";
-										 					echo $value["name"]."<br>";
-										 					echo "<a href=".$trackingUrl."> download</a> <br>";
-										                                        echo  "<img src='http://api.qrserver.com/v1/create-qr-code/?data=".$trackingUrl."&size=150x150'/> <br>";
-										 					echo "</center>";
-										 					}
-										 				}
-										 			}
-										 		}
-										 	}
-
-										?>
-                                                      
-			 			</div>
-			 			<div class="tab-pane " id="PC"> PC </div>	
-			 		</div>
-
-			 	</div>
+                    <iframe src="https://www.topadsmedia.com/offerwall.php?pubid=205" subid="100921" class="col-md-12" height="900px" style="border:0; padding:0; scrolling="auto" margin:0;" frameborder="0" /><a href="https://www.topadsmedia.com/offerwall.php?pubid=205" target="_blank"></a></iframe>
+            </div>
          </div>  
     <footer>
         <div class="container">
